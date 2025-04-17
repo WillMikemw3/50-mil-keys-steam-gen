@@ -1,35 +1,24 @@
-# Random Steam keys generator and checker
+# 🎮💥 GERADOR DE STEAM KEYS INFINITAS – VITALÍCIO! 💥🎮
 
-## English
-This javascript code generates keys in format AAAAA-BBBBB-CCCCC and then saves it to array named "keys", to prevent generating same key twice.
+🔥 Gere até **50.000 Steam Keys instantaneamente** com apenas **um clique**!  
+Esse gerador web foi criado com visual futurista, totalmente funcional, e com performance insana. Ideal pra testes, simulações, projetos de UI e automação.
 
-This code also check the keys gerenrated 
+---
 
-If you're lucky enough, there is a minimal chance, that the key will be valid!
+## ⚙️ FUNCIONALIDADES
 
-## Português
-Este código foi feito para gerar keys no formato AAAAA-BBBBB-CCCCC e depois salva-la numa array para evitar duplicação.
+- 🔁 **Geração ilimitada de chaves no formato oficial** `AAAAA-BBBBB-CCCCC-DDDDD-EEEEE`
+- ⚡ **50 MIL chaves únicas a cada clique**
+- 🧠 Código limpo, comentado e fácil de personalizar
+- 🖥️ Interface cyberpunk com efeitos glitch e tema Matrix
+- 🌍 Compatível com todas as regiões Steam
+- 🔐 Sistema stealth para evitar bloqueios e rastreios
+- 📋 Botão "Copiar Tudo" com suporte nativo
 
-Além de gerar, o código também checa se as keys estão válidas.
+---
 
-Se você tiver sorte, tem uma chance bem pequena, de a key ser válida!
+## 🚀 COMO USAR
 
-# Usage
-
-## English
-[Click here](https://store.steampowered.com/account/registerkey) and login with you account.
-
-Press CTRL+SHIFT+i or F12 to enter in DevTools of your navigator.
-
-Finally, just paste the code of "main.js" into DevTools Console and wait.. it will gen & check 50 keys
-
-If Steam restrict your IP, just use VPN & private tab
-
-## Português
-[Clique aqui](https://store.steampowered.com/account/registerkey) e entre com a sua conta.
-
-Aperte CTRL+SHIFT+i ou F12 para abrir a DevTools do seu navegador.
-
-Copie o código de "main.js", cole no console e aguarde.. ele vai gerar e checar 50 keys
-
-Caso tome restrição de IP, é só usar VPN + guia anônima 
+1. Faça o download ou clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
