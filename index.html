@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de 50 000 Steam Keys</title>
+
+    <!-- Fontes futuristas -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* — Variáveis de cor — */
+        :root {
+            --bg: #0d0d0d;
+            --card-bg: #1a1a1a;
+            --border: #333;
+            --neon: #0f0;
+            --neon-alt: #0ff;
+            --text: #ccc;
+            --shadow: rgba(0, 255, 0, 0.2);
+            --radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: var(--bg);
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .container {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: 0 0 20px var(--shadow);
+            padding: 2rem;
+            max-width: 700px;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Fundo “matrix” sutil */
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,\
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" opacity="0.1">\
+          <text x="0" y="15" font-family="Share Tech Mono" font-size="16" fill="%230f0">0 1 0 1</text>\
+        </svg>'
+                ) center/40px 40px repeat;
+            border-radius: var(--radius);
+            pointer-events: none;
+        }
+
+        /* Logo estilizada */
+        .logo {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo img {
+            width: 120px;
+            border: 2px solid var(--neon);
+            border-radius: var(--radius);
+            box-shadow: 0 0 10px var(--neon-alt);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .logo img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px var(--neon-alt);
+        }
+
+        /* Título com glitch */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            text-align: center;
+            color: var(--neon);
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        h1::before,
+        h1::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        h1::before {
+            color: var(--neon-alt);
+            clip: rect(2px, 9999px, 8px, 0);
+            animation: glitch-anim 2s infinite linear alternate-reverse;
+        }
+
+        h1::after {
+            color: var(--neon);
+            clip: rect(15px, 9999px, 18px, 0);
+            animation: glitch-anim2 3s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% {
+                transform: translate(0.5px, -0.5px);
+            }
+
+            20% {
+                transform: translate(-0.5px, 0.5px);
+            }
+
+            40% {
+                transform: translate(0.5px, 0.5px);
+            }
+
+            60% {
+                transform: translate(-0.5px, -0.5px);
+            }
+
+            80% {
+                transform: translate(0.5px, 0);
+            }
+
+            100% {
+                transform: translate(0, 0.5px);
+            }
+        }
+
+        @keyframes glitch-anim2 {
+            0% {
+                transform: translate(-0.5px, 0.5px);
+            }
+
+            25% {
+                transform: translate(0.5px, -0.5px);
+            }
+
+            50% {
+                transform: translate(-0.5px, -0.5px);
+            }
+
+            75% {
+                transform: translate(0.5px, 0.5px);
+            }
+
+            100% {
+                transform: translate(0, -0.5px);
+            }
+        }
+
+        p {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            font-family: 'Share Tech Mono', monospace;
+            background: transparent;
+            color: var(--neon);
+            border: 2px solid var(--neon);
+            padding: 0.6rem 1.2rem;
+            border-radius: var(--radius);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.3s, background 0.3s;
+        }
+
+        button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--neon);
+            transform: skewX(-20deg);
+            transition: left 0.5s;
+            z-index: 0;
+        }
+
+        button:hover {
+            color: var(--card-bg);
+        }
+
+        button:hover::before {
+            left: 200%;
+        }
+
+        button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        textarea {
+            width: 100%;
+            height: 400px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--text);
+            resize: vertical;
+        }
+
+        textarea::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        textarea::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: var(--radius);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Insira sua logo aqui -->
+        <div class="logo">
+            <img src="/src/img-will-vendas.png" alt="Will Vendas Logo">
+        </div>
+
+        <h1 data-text="STEAM KEY GEN">STEAM KEY GEN</h1>
+        <p>50 000 chaves no formato <code>AAAAA-BBBBB-CCCCC-DDDDD-EEEEE</code></p>
+
+        <div class="controls">
+            <button id="btnGenerate"><span>GERAR 50 000</span></button>
+            <button id="btnCopy"><span>COPIAR TUDO</span></button>
+        </div>
+
+        <textarea id="output" readonly placeholder="Suas chaves aparecerão aqui…"></textarea>
+    </div>
+
+    <script>
+        const keySymbols = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.split('');
+
+        // Gera uma Steam‑key de 5×5
+        function genKey() {
+            let key = '';
+            for (let block = 0; block < 5; block++) {
+                for (let i = 0; i < 5; i++) {
+                    key += keySymbols[(Math.random() * keySymbols.length) | 0];
+                }
+                if (block < 4) key += '-';
+            }
+            return key;
+        }
+
+        // Gera n keys únicas
+        function genKeys(n) {
+            const set = new Set();
+            while (set.size < n) {
+                set.add(genKey());
+            }
+            return Array.from(set);
+        }
+
+        document.getElementById('btnGenerate').addEventListener('click', () => {
+            const out = document.getElementById('output');
+            out.value = 'Gerando 50 000 keys, aguarde…';
+            setTimeout(() => {
+                const keys = genKeys(50000);
+                out.value = keys.join('\n');
+            }, 50);
+        });
+
+        document.getElementById('btnCopy').addEventListener('click', () => {
+            const out = document.getElementById('output');
+            out.select();
+            document.execCommand('copy');
+        });
+    </script>
+</body>
+
+</html>
